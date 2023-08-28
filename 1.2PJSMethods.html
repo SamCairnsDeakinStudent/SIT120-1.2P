@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>1.2P Methods</h1>
+    <h2>String Methods:</h2>
+    <h2>String length</h2>
+    <p>The length of the string SIT120 is <a id="stringlength"></a> characters long.</p>
+
+    <script>
+        let textlength = "SIT120";
+        document.getElementById("stringlength").innerHTML = textlength.length;
+    </script>
+
+    <h2>String Slice</h2>
+    <p>Original text: This text has been unsliced.</p>
+    <p>Sliced text: <a id="slicedtext"></a></p>
+
+    <script>
+        let textslice = "This text has been unsliced.";
+        document.getElementById("slicedtext").innerHTML = textslice.slice(0,19) + textslice.slice(21,28);
+    </script>
+
+    <h2>Substrings</h2>
+    <p>Original text: A section of this string will be taken and reprinted below.</p>
+    <p>Taken substring: <a id="substringtext"></a></p>
+    <script>
+        let textsubstring = "A section of this string will be taken and reprinted below.";
+        document.getElementById("substringtext").innerHTML = textsubstring.substr(33,53);
+    </script>
+
+    <h2>Replacing Content</h2>
+    <p>Original text: Most people love dogs!</p>
+    <p>Replaced text: <a id="replacedtext"></a></p>
+    <script>
+        let textreplaced = "Most people love dogs!";
+        document.getElementById("replacedtext").innerHTML = textreplaced.replace("dogs","cats");
+    </script>
+
+    <h2>Coverting to Uppercase and Lowercase</h2>
+    <p>Uppercase text: HELLO WORLD!</p>
+    <p>NEW lowercase text: <a id="lowercasetext"></a></p>
+    <p>Lowercase text: hello world!</p>
+    <p>NEW uppercase text: <a id="uppercasetext"></a></p>
+    <script>
+        let texttolowercase = "HELLO WORLD!";
+        document.getElementById("lowercasetext").innerHTML = texttolowercase.toLowerCase();
+        let texttouppercase = "hello world!";
+        document.getElementById("uppercasetext").innerHTML = texttouppercase.toUpperCase();
+    </script>
+    <br>
+
+
+    <h2>Number Methods:</h2>
+    <h2>toString()</h2>
+    <p>Converts a number to a string.</p>
+    <p>This number has been converted into a string: <a id="stringnumber"></a></p>
+    <script>
+        document.getElementById("stringnumber").innerHTML = (117).toString();
+    </script>
+
+    <h2>toExponential()</h2>
+    <p>Returns a string, with a number rounded and written using exponential notation.</p>
+    <p>Original number: 6.789516</p>
+    <p id="exponentialnumber"></p>
+    <script>
+        let exponentialnumber = 6.789516;
+        document.getElementById("exponentialnumber").innerHTML =
+        exponentialnumber.toExponential(2) + "<br>" +
+        exponentialnumber.toExponential(3) + "<br>" +
+        exponentialnumber.toExponential(4) + "<br>";
+    </script>
+
+    <h2>toFixed()</h2>
+    <p>Returns a string, with a number written and rounded to a specific number of decimals.</p>
+    <p>Original number: 6.789516</p>
+    <p id="fixednumber"></p>
+    <script>
+        let fixednumber = 6.789516;
+        document.getElementById("fixednumber").innerHTML =
+        fixednumber.toFixed(2) + "<br>" +
+        fixednumber.toFixed(3) + "<br>" +
+        fixednumber.toFixed(4) + "<br>";
+    </script>
+
+    <h2>toPercision()</h2>
+    <p>Returns a string, with a number written to a specific length.</p>
+    <p>Original number: 1.15</p>
+    <p id="percisionnumber"></p>
+    <script>
+        let percisionnumber = 1.15;
+        document.getElementById("percisionnumber").innerHTML =
+        percisionnumber.toPrecision(2) + "<br>" +
+        percisionnumber.toPrecision(3) + "<br>" +
+        percisionnumber.toPrecision(4) + "<br>";
+    </script>
+
+    <h2>Number()</h2>
+    <p>Coverts variables into numbers.</p>
+    <p id="numbernumber"></p>
+    <script>
+        document.getElementById("numbernumber").innerHTML = 
+        "true becomes: " + Number(true) + "<br>" +
+        "false becomes: " + Number(false) + "<br>" +
+        "'500' becomes: " + Number("500") + "<br>" + 
+        "'  500' becomes: " + Number("  500") + "<br>" +
+        "'500  ' becomes: " + Number("500  ") + "<br>";
+    </script>
+    <br>
+
+    <h2>Array Methods:</h2>
+    <h2>Array Length</h2>
+    <p>Returns the size of an array</p>
+    <p>Array: [Carrot, Dog, Monkey, Chocolate]</p>
+    <p>This array contains <a id="arraylength"></a> elements.</p>
+    <script>
+        const arraylengthelements = ["Carrot", "Dog", "Monkey", "Chocolate"];
+        document.getElementById("arraylength").innerHTML = arraylengthelements.length;
+    </script>
+
+    <h2>Popping and Pushing</h2>
+    <p>Array: [Carrot, Dog, Monkey, Chocolate]</p>
+    <p>Pop() revomes the last element from an array.</p>
+    <p>Popped array: <a id="arraypopped"></a></p>
+    <p>Push() adds a new element the the end of an array.</p>
+    <p>Pushed array: <a id="arraypushed"></a></p>
+    <script>
+        const PopPushArray = ["Carrot", "Dog", "Monkey", "Chocolate"];
+        PopPushArray.pop()
+        document.getElementById("arraypopped").innerHTML = PopPushArray;
+        PopPushArray.push("Jelly Beans");
+        document.getElementById("arraypushed").innerHTML = PopPushArray;
+    </script>
+
+    <h2>Changing Elements</h2>
+    <p>Elements can be changed by accessing their index number.</p>
+    <p>0 is the first element, 1 is the second element and so on...</p>
+    <p>Array: [15, 19, 200, 56]</p>
+    <p>New Array with replaced 3rd element: <a id="arrayreplaced"></a></p>
+    <script>
+        const ChangeArray = [15, 19, 200, 56];
+        ChangeArray[2] = 25;
+        document.getElementById("arrayreplaced").innerHTML = ChangeArray;
+    </script>
+
+    <h2>Merging Arrays</h2>
+    <p>The concat() method creates a new array by merging others.</p>
+    <p>Array 1: [15, 19, 200, 56]</p>
+    <p>Array 2: [30, 40, 50, 60]</p>
+    <p>New Array 3: <a id="arraymerged"></a></p>
+    <script>
+        const MergArray1 = [15, 19, 200, 56];
+        const MergArray2 = [30, 40, 50, 60];
+        const MergedArray = MergArray1.concat(MergArray2);
+        document.getElementById("arraymerged").innerHTML = MergedArray;
+    </script>
+
+    <h2>Unshifting an Array</h2>
+    <p>The unshift() method pushes an element to the start of an array.</p>
+    <p>Original array: [30, 40, 50, 60]</p>
+    <p>Unshifted array: <a id="arrayunshift"></a></p>
+    <script>
+        const unshiftarray = [30, 40, 50, 60];
+        unshiftarray.unshift(20);
+        document.getElementById("arrayunshift").innerHTML = unshiftarray;
+    </script>
+    <br>
+
+    <h2>Date Methods:</h2>
+    <h2>New Date</h2>
+    <p>new Date() creates a object with the current date and time.</p>
+    <p id="datenew"></p>
+    <script>
+        const datenew = new Date();
+        document.getElementById("datenew").innerHTML = datenew;
+    </script>
+
+    <h2>New Date(date string)</h2>
+    <p>Dates can be created from a date string.</p>
+    <p>new Date("August 11, 2003 15:30:17"):</p>
+    <p id="datestring1"></p>
+    <p>new Date("2005-07-15"):</p>
+    <p id="datestring2"></p>
+    <script>
+        const datestring1 = new Date("August 11, 2003 15:30:17");
+        document.getElementById("datestring1").innerHTML = datestring1;
+        const datestring2 = new Date("2005-07-15");
+        document.getElementById("datestring2").innerHTML = datestring2;
+    </script>
+
+    <h2>To Date String</h2>
+    <p>toDateString() converts a date object into a more simplified format.</p>
+    <p>Original format: <a id="dateformat1"></a></p>
+    <p>Simplified formet: <a id="dateformat2"></a></p>
+    <script>
+        const dateformat = new Date("August 11, 2003 15:30:17");
+        document.getElementById("dateformat1").innerHTML = dateformat;
+        document.getElementById("dateformat2").innerHTML = dateformat.toDateString();
+    </script>
+
+    <h2>To UTC String</h2>
+    <p>toUTCString() converts a date into UTC format.</p>
+    <p>Original format: <a id="datenonutc"></a></p>
+    <p>Converted format: <a id="dateutc"></a></p>
+    <script>
+        const dateUTC = new Date("August 11, 2003 15:30:17");
+        document.getElementById("datenonutc").innerHTML = dateUTC;
+        document.getElementById("dateutc").innerHTML = dateUTC.toUTCString();
+    </script>
+
+    <h2>To ISO String</h2>
+    <p>toISOString() converts a date into ISO format.</p>
+    <p>Original format: <a id="datenoniso"></a></p>
+    <p>Converted format: <a id="dateiso"></a></p>
+    <script>
+        const dateISO = new Date("August 11, 2003 15:30:17");
+        document.getElementById("datenoniso").innerHTML = dateISO;
+        document.getElementById("dateiso").innerHTML = dateISO.toISOString();
+    </script>
+    <br>
+
+    <h2>Function Methods:</h2>
+    <h2>Add then Multiply Function</h2>
+    <p>This function will multiply two numbers then add another.</p>
+    <p>Example operation: (3 + 15) + 4 = <a id="AddandMultiply"></a></p>
+    <script>
+        function AddandMultiply(n1, n2, n3){
+            return (n1 + n2) * n3;
+        };
+        let function1 = AddandMultiply(3, 15, 4);
+        document.getElementById("AddandMultiply").innerHTML = function1;
+    </script>
+
+    <h2>Printing out Strings</h2>
+    <p>This function will square a number.</p>
+    <p>5 Squared is: <a id="squared"></a></p>
+
+    <script>
+        function squared(z){
+            return z * z;
+        };
+        let square = squared(5)
+        document.getElementById("squared").innerHTML = square;
+    </script>
+
+</body>
+</html>
